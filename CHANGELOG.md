@@ -2,6 +2,12 @@
 
 All notable changes to `baton` (crate `baton-touch`). Versions follow [Semantic Versioning](https://semver.org/); before 1.0, a breaking change bumps the minor version.
 
+## [0.2.4] - 2026-11-13
+
+### Changed
+
+- Lane reuse: the `/baton` skill tells the lead to post follow-up work for a follower it just worked with in that follower's current lane (the lane of its latest message), under a new task slug, even for a different workstream. A new lane is only for parallel work, a machine with no recent session in a lane, or the human's request. Before, each new workstream got a new lane, so the human had to set up a new session on the other machine for every follow-up. `docs/design.md` follows it. No code change.
+
 ## [0.2.3] - 2026-11-03
 
 ### Added
